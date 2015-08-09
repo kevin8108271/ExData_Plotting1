@@ -1,6 +1,0 @@
-data<-read.table("household_power_consumption.txt",sep=";",na.strings='?',header=TRUE,quote='')
-data$date=as.Date(data$Date,"%d/%m/%Y")
-newdata<-subset(data,data$date=="2007-02-02" | data$date=="2007-02-01")
-png(height=480,width=480,file="first.png")
-hist(newdata$ Global_active_power,xlab='Globlal Active Power(kilowatts)',ylab='Frequency',main='Global Active Power',col='red')
-dev.off()
